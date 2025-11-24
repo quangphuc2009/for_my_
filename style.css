@@ -97,12 +97,14 @@ body {
 
 .heart p {
     color: white;
-    font-size: 16px;
+    font-size: 20px; /* Tăng kích thước chữ */
     font-weight: bold;
-    transform: rotate(45deg); /* Xoay ngược lại để chữ đứng thẳng */
+    transform: rotate(45deg); /* Giữ nguyên xoay ngược */
     position: absolute;
-    top: 35px;
-    left: 10px;
+    /* Điều chỉnh vị trí để chữ nằm giữa trái tim */
+    top: 25px; /* Đẩy lên trên hơn một chút */
+    left: 5px; 
+    right: 5px; /* Thêm căn lề phải để chữ nằm ở giữa */
     text-align: center;
 }
 
@@ -110,4 +112,5 @@ body {
     0% { transform: rotate(-45deg) scale(0.8); }
     50% { transform: rotate(-45deg) scale(1.1); }
     100% { transform: rotate(-45deg) scale(0.8); }
+
 }
