@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Điệp Đặc Biệt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="input-area">
+            <h1>Nhập thông tin để nhận quà</h1>
+            <label for="name">Họ và Tên:</label>
+            <input type="text" id="name" required>
+            
+            <label for="dob">Ngày Tháng Năm Sinh:</label>
+            <input type="date" id="dob" required>
+            
+            <button id="submit-btn">Gửi</button>
+        </div>
+
+        <div id="gift-box" class="hidden">
+            <div class="gift-wrap" onclick="openGift()">🎁</div>
+            <p>Click vào hộp quà!</p>
+        </div>
+
+        <div id="message-container" class="hidden">
+            <div class="heart">
+                <p>Anh Yêu Em</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

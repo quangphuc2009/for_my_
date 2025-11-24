@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fce4ec; /* Màu nền nhẹ nhàng */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#input-area input, #input-area button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#input-area button {
+    background-color: #ff69b4; /* Hồng */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#input-area button:hover {
+    background-color: #e55a9b;
+}
+
+/* Ẩn các phần tử */
+.hidden {
+    display: none !important;
+}
+
+/* ---- Hiệu ứng Hộp Quà ---- */
+#gift-box {
+    animation: fall 1.5s ease-out forwards; /* Hiệu ứng rơi */
+    font-size: 80px;
+    cursor: pointer;
+    margin-top: 50px; /* Tạo khoảng cách để hộp quà rơi từ trên xuống */
+    position: relative;
+    top: -200px; /* Bắt đầu từ vị trí cao hơn màn hình */
+}
+
+@keyframes fall {
+    to {
+        top: 0; /* Rơi xuống vị trí bình thường */
+        opacity: 1;
+    }
+}
+
+/* ---- Hình Trái Tim ---- */
+#message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    background-color: #e0004f; /* Màu đỏ trái tim */
+    transform: rotate(-45deg);
+    animation: pulse 1.5s infinite; /* Hiệu ứng nhấp nháy */
+}
+
+.heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #e0004f;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    left: 50px;
+    top: 0;
+}
+
+.heart p {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transform: rotate(45deg); /* Xoay ngược lại để chữ đứng thẳng */
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    text-align: center;
+}
+
+@keyframes pulse {
+    0% { transform: rotate(-45deg) scale(0.8); }
+    50% { transform: rotate(-45deg) scale(1.1); }
+    100% { transform: rotate(-45deg) scale(0.8); }
+}
